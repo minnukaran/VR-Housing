@@ -38,11 +38,15 @@
 			</a-entity>
 		</a-entity>
 
-		<a-box id="marker" width="0.05" height="0.5" length="0.5" src="#text1" position="2.5 4.5 3.5" rotation="0 -10 10">
+		<a-box id="marker1" width="0.05" height="0.5" length="0.5" src="#text1" position="2.5 4.5 3.5" rotation="0 -10 10">
 			<a-animation begin="click" attribute="scale" from="1 1 1" to="2 2 1" direction="alternate" repeat="1" dur="500" fill="both"></a-animation>
 		</a-box>
 
-		<a-entity id="marker2" cursor-listener position="0 1 0">
+		<a-box id="marker2" width="0.05" height="0.5" length="0.5" src="#text1" position="1.5 4.5 7.5" rotation="0 -50 10">
+			<a-animation begin="click" attribute="scale" from="1 1 1" to="2 2 1" direction="alternate" repeat="1" dur="500" fill="both"></a-animation>
+		</a-box>
+
+		<a-entity id="markern" cursor-listener position="0 1 0">
 			<a-entity class="cube" mixin="cube green">
 				<a-animation begin="click" attribute="rotation" to="0 360 0" easing="linear" dur="2000" fill="backwards"></a-animation>
 			</a-entity>
@@ -58,6 +62,32 @@
 
 		<a-sky src="#lake"></a-sky>
 	</a-scene>
+	<div style="position:fixed;top:0;left:0;background-color:white;font-size:1.5em;">
+		x
+		<span id="xplus">+</span>
+		<span id="xminus">-</span>
+		<br />
+		y
+		<span id="yplus">+</span>
+		<span id="yminus">-</span>
+		<br />
+		z
+		<span id="zplus">+</span>
+		<span id="zminus">-</span>
+		<br />
+		r1
+		<span id="r1plus">+</span>
+		<span id="r1minus">-</span>
+		<br />
+		r2
+		<span id="r2plus">+</span>
+		<span id="r2minus">-</span>
+		<br />
+		r3
+		<span id="r3plus">+</span>
+		<span id="r3minus">-</span>
+		<br />
+	</div>
 </body>
 
 </html>
