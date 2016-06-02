@@ -12,6 +12,8 @@
 		<a-assets>
 			<img id="lake" src="/images/photosphere.jpg">
 			<img id="text1" src="/images/text1.png">
+			<img id="text2" src="/images/text2.png">
+			<img id="text3" src="/images/text3.png">
 			<a-mixin id="cube" geometry="primitive: box"></a-mixin>
 			<a-mixin id="cube-hovered" material="color: magenta"></a-mixin>
 			<a-mixin id="cube-selected" material="color: cyan"></a-mixin>
@@ -32,37 +34,23 @@
 			</a-entity>
 		</a-entity>
 
-		<a-entity class="cube" cursor-listener position="-3.5 1 0">
-			<a-entity mixin="cube red">
-				<a-animation begin="click" attribute="scale" from="1 1 1" to="2 2 1" direction="alternate" repeat="1" dur="500" fill="both"></a-animation>
-			</a-entity>
-		</a-entity>
-
 		<a-box id="marker1" width="0.05" height="0.5" length="0.5" src="#text1" position="2.5 4.5 3.5" rotation="0 -10 10">
 			<a-animation begin="click" attribute="scale" from="1 1 1" to="2 2 1" direction="alternate" repeat="1" dur="500" fill="both"></a-animation>
 		</a-box>
 
-		<a-box id="marker2" width="0.05" height="0.5" length="0.5" src="#text1" position="1.5 4.5 7.5" rotation="0 -50 10">
+		<a-box id="marker2" width="0.05" height="0.5" length="0.5" src="#text2" position="1.5 4.5 7.5" rotation="0 -50 10">
 			<a-animation begin="click" attribute="scale" from="1 1 1" to="2 2 1" direction="alternate" repeat="1" dur="500" fill="both"></a-animation>
 		</a-box>
 
-		<a-entity id="markern" cursor-listener position="0 1 0">
-			<a-entity class="cube" mixin="cube green">
-				<a-animation begin="click" attribute="rotation" to="0 360 0" easing="linear" dur="2000" fill="backwards"></a-animation>
-			</a-entity>
-		</a-entity>
+		<a-box id="marker3" width="0.05" height="2.5" length="2.5" src="#text3" position="-16.7 14.3 -5.7" rotation="0 -30 10">
+			<a-animation begin="click" attribute="scale" from="1 1 1" to="2 2 1" direction="alternate" repeat="1" dur="500" fill="both"></a-animation>
+		</a-box>
 
-		<a-entity class="cube" cursor-listener position="3.5 1 0" rotation="0 45 0">
-			<a-entity mixin="cube blue">
-				<a-animation begin="click" fill="forwards" repeat="1" direction="alternate" attribute="position" from="0 0 0" to="15 0 0" dur="2000"></a-animation>
-			</a-entity>
-		</a-entity>
 
-		<a-entity position="0 3 0" class="clickable" mixin="cube yellow" rotation="0 45 0" scale=".5 .5 .5"></a-entity>
 
 		<a-sky src="#lake"></a-sky>
 	</a-scene>
-	<div style="position:fixed;top:0;left:0;background-color:white;font-size:1.5em;">
+	<div style="position:fixed;top:0;left:0;background-color:white;font-size:1.5em;display:none;">
 		x
 		<span id="xplus">+</span>
 		<span id="xminus">-</span>

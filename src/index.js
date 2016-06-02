@@ -11,7 +11,7 @@ window.onload = () => {
 			console.log('marker was clicked')
 		})
 
-	const selectedBox = $('#marker2')[0]
+	const selectedBox = $('#marker3')[0]
 	const movementGenerator = attribute => (dimension, direction) => () => {
 		const currentPosition = selectedBox.getAttribute(attribute)
 		currentPosition[dimension] += direction
